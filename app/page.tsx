@@ -4,6 +4,7 @@ import styles from './page.module.css'
 import Loader from '@/components/loader/Loader'
 import Header from '@/components/header/Header'
 import Navbar from '@/components/navbar/Navbar'
+import Book from '@/components/book/Book'
 
 const Home = () => {
   const [showLoader, setShowLoader] = useState(true)
@@ -34,6 +35,7 @@ const Home = () => {
             <main className={styles.main}>
               <Header />
               <Navbar />
+              <Book />
             </main>
           </>
         )}
