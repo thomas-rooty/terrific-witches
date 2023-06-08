@@ -50,8 +50,8 @@
 }
 
 .book .pages {
-  width: 60vw;
-  height: 44vw;
+  width: 45vw;
+  height: 33vw;
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -65,8 +65,8 @@
   margin: 0;
   position: absolute;
   top: 0;
-  width: 30vw;
-  height: 44vw;
+  width: 22.5vw;
+  height: 33vw;
   transform-origin: 0 0;
   transition: transform 1.4s;
   backface-visibility: hidden;
