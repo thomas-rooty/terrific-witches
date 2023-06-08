@@ -1,21 +1,25 @@
-'use client'
-import { useState, useEffect } from 'react'
-import styles from './Navbar.module.css'
+import { useState } from 'react'
+import styles from './navbar.module.css'
 
 const Navbar = () => {
-  const [dividerWidth, setDividerWidth] = useState(0)
+  const [activeLink, setActiveLink] = useState('')
 
-  useEffect(() => {
-    setDividerWidth(200)
-  }, [])
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link)
+  }
 
   return (
     <nav className={styles.navbar}>
-      <img src={'/images/logo_nobg.png'} alt="Terrific Witches Logo" className={styles.logoImage} />
-      <div className={styles.logoContainer}>
-        <h1 className={styles.logo}>TERRIFIC</h1>
-        <div className={styles.divider} style={{ width: `${dividerWidth}%` }} />
-        <h1 className={styles.logo}>WITCHES</h1>
+      <div className={styles.navlinks}>
+        <div className={`${styles.navlink} ${activeLink === 'INFO' ? styles.active : ''}`} onClick={() => handleLinkClick('INFO')}>
+          INFO
+        </div>
+        <div className={`${styles.navlink} ${activeLink === 'QUI SOMMES NOUS ?' ? styles.active : ''}`} onClick={() => handleLinkClick('QUI SOMMES NOUS ?')}>
+          QUI SOMMES NOUS ?
+        </div>
+        <div className={`${styles.navlink} ${activeLink === 'NOUS REJOINDRE' ? styles.active : ''}`} onClick={() => handleLinkClick('NOUS REJOINDRE')}>
+          NOUS REJOINDRE
+        </div>
       </div>
     </nav>
   )

@@ -2,6 +2,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import styles from './page.module.css'
 import Loader from '@/components/loader/Loader'
+import Header from '@/components/header/Header'
 import Navbar from '@/components/navbar/Navbar'
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
         ) : (
           <>
             <main className={styles.main}>
+              <Header />
               <Navbar />
             </main>
           </>
