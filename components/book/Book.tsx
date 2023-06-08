@@ -1,23 +1,55 @@
-import styles from './Book.module.css'
+import './Book.css'
+import { useEffect } from 'react'
+
+interface PageElement extends HTMLElement {
+  pageNum: number
+}
 
 const Book = () => {
-  const pages = Array.from({ length: 32 }, (_, i) => i + 1)
+  // Book pagination system
+  useEffect(() => {
+    const pages = document.getElementsByClassName('page') as HTMLCollectionOf<PageElement>
 
-  const handleClick = (pageNum: number) => {
-    const currentPage = document.getElementById(`page-${pageNum}`)
-    const nextPage = pageNum % 2 === 0 ? currentPage!.previousElementSibling! : currentPage!.nextElementSibling!
-    currentPage!.classList.toggle(styles.flipped)
-    nextPage!.classList.toggle(styles.flipped)
-  }
+    for (let i = 0; i < pages.length; i++) {
+      const page = pages[i]
+      if (i % 2 === 0) {
+        page.style.zIndex = String(pages.length - i)
+      }
+    }
+
+    for (let i = 0; i < pages.length; i++) {
+      const page = pages[i]
+      page.pageNum = i + 1
+
+      page.addEventListener('click', () => {
+        if (page.pageNum % 2 === 0) {
+          page.classList.remove('flipped')
+          if (page.previousElementSibling) {
+            page.previousElementSibling.classList.remove('flipped')
+          }
+        } else {
+          page.classList.add('flipped')
+          if (page.nextElementSibling) {
+            page.nextElementSibling.classList.add('flipped')
+          }
+        }
+      })
+    }
+  }, [])
 
   return (
-    <div className={styles.book}>
-      <div className={styles.pages}>
-        {pages.map((pageNum) => (
-          <div key={pageNum} id={`page-${pageNum}`} className={`${styles.page} ${pageNum % 2 === 0 ? '' : styles.odd}`} onClick={() => handleClick(pageNum)}>
-            {pageNum % 2 === 0 ? <p>Open Me, please!</p> : <p>Hello there!</p>}
-          </div>
-        ))}
+    <div className="book">
+      <div id="pages" className="pages">
+        <div className="page">
+          <p>Open Me, please!</p>
+        </div>
+        <div className="page">2</div>
+        <div className="page">
+          <p>Hello there!</p>
+        </div>
+        <div className="page">4</div>
+        <div className="page">5</div>
+        <div className="page">6</div>
       </div>
     </div>
   )
