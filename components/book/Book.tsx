@@ -1,4 +1,4 @@
-import './Book.css'
+import './book.css'
 import { useEffect } from 'react'
 
 interface PageElement extends HTMLElement {
