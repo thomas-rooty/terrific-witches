@@ -1,5 +1,19 @@
 .book {
   transition: opacity 0.4s 0.2s;
+  perspective: 250vw;
+  animation: float-tilt 8s infinite ease-in-out alternate;
+}
+
+@keyframes float-tilt {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotateZ(-2deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg);
+  }
 }
 
 .page {
@@ -7,11 +21,12 @@
   height: 44vw;
   float: left;
   margin-bottom: 0.5em;
-  background: #111111 no-repeat left top;
+  background: none;
   background-size: cover;
 }
 
 .page1 {
+  background-color: black!important;
   background-image: url("https://i.imgur.com/66g5ZEf.jpeg")!important;
   background-position: center!important;
   background-size: cover!important;
@@ -19,6 +34,7 @@
 }
 
 .page6 {
+  background-color: black!important;
   background-image: url("https://i.imgur.com/rYrYhuV.jpeg")!important;
   background-position: center!important;
   background-size: cover!important;
@@ -57,7 +73,7 @@
   transform-style: preserve-3d;
   cursor: pointer;
   user-select: none;
-  background-color: #f0f0f0;
+  background-color: #1a1a1a;
 }
 
 .book .page:before {

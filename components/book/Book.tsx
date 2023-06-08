@@ -1,4 +1,5 @@
 import './book.css'
+import styles from './book.module.css'
 import { useEffect } from 'react'
 
 interface PageElement extends HTMLElement {
@@ -38,18 +39,18 @@ const Book = () => {
   }, [])
 
   return (
-    <div className="book">
-      <div id="pages" className="pages">
-        <div className="page page1">
-          <p>Open Me, please!</p>
+    <div className={styles.container}>
+      <div className="book">
+        <div id="pages" className="pages">
+          <div className="page page1" />
+          <div className="page">2</div>
+          <div className="page">
+            <p>Hello there!</p>
+          </div>
+          <div className="page">4</div>
+          <div className="page">5</div>
+          <div className="page page6">6</div>
         </div>
-        <div className="page">2</div>
-        <div className="page">
-          <p>Hello there!</p>
-        </div>
-        <div className="page">4</div>
-        <div className="page">5</div>
-        <div className="page page6">6</div>
       </div>
     </div>
   )
