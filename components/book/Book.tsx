@@ -40,7 +40,7 @@ const Book = () => {
   return (
     <div className="book">
       <div id="pages" className="pages">
-        <div className="page">
+        <div className="page page1">
           <p>Open Me, please!</p>
         </div>
         <div className="page">2</div>
@@ -49,7 +49,7 @@ const Book = () => {
         </div>
         <div className="page">4</div>
         <div className="page">5</div>
-        <div className="page">6</div>
+        <div className="page page6">6</div>
       </div>
     </div>
   )
