@@ -97,7 +97,7 @@
 }
 
 .book .page:nth-child(odd):hover {
-  transform: rotateY(-15deg);
+  transform: rotateY(-20deg);
 }
 
 .book .page:nth-child(odd):hover:before {

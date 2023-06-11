@@ -43,9 +43,9 @@ const Book = () => {
       <div className="book">
         <div id="pages" className="pages">
           <div className="page page1" />
-          <div className="page">2</div>
+          <div className="page"></div>
           <div className="page">
-            <p>Hello there!</p>
+            <p className={styles.title}>Terrific Witches</p>
           </div>
           <div className="page">4</div>
           <div className="page">5</div>
