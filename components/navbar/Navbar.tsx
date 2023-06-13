@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './navbar.module.css'
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('')
+  const [activeLink, setActiveLink] = useState('INFO')
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link)
