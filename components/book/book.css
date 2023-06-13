@@ -26,19 +26,117 @@
 }
 
 .page1 {
-  background-color: black!important;
-  background-image: url("https://i.imgur.com/66g5ZEf.jpeg")!important;
-  background-position: center!important;
-  background-size: cover!important;
-  background-repeat: no-repeat!important;
+  outline: 1px solid black;
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/cover.png?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page2 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/1%20gauche.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page3 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/2%20droite.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page4 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/3%20gauche.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page5 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/4%20droite.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .page6 {
-  background-color: black!important;
-  background-image: url("https://i.imgur.com/rYrYhuV.jpeg")!important;
-  background-position: center!important;
-  background-size: cover!important;
-  background-repeat: no-repeat!important;
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/5%20gauche.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page7 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/6%20droite.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page8 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/7%20gauche.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page9 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/8%20droite.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page10 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/9%20gauche.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page11 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/10%20droite.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page12 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/11%20gauche.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page13 {
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/12%20droite.jpg?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.page14 {
+  outline: 1px solid black;
+  background-color: black !important;
+  background-image: url("https://github.com/thomas-rooty/terrific-witches/blob/master/public/book/back.png?raw=true") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .page:nth-child(even) {

@@ -43,13 +43,19 @@ const Book = () => {
       <div className="book">
         <div id="pages" className="pages">
           <div className="page page1" />
-          <div className="page"></div>
-          <div className="page">
-            <p className={styles.title}>Terrific Witches</p>
-          </div>
-          <div className="page">4</div>
-          <div className="page">5</div>
-          <div className="page page6">6</div>
+          <div className="page page2" />
+          <div className="page page3" />
+          <div className="page page4" />
+          <div className="page page5" />
+          <div className="page page6" />
+          <div className="page page7" />
+          <div className="page page8" />
+          <div className="page page9" />
+          <div className="page page10" />
+          <div className="page page11" />
+          <div className="page page12" />
+          <div className="page page13" />
+          <div className="page page14" />
         </div>
       </div>
     </div>
