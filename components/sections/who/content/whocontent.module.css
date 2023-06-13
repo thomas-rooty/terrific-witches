@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.paragraph {
+  background: #383434;
+  padding: 4rem;
+  border-radius: 10px;
+  width: 100%;
+  font-family: 'Cinzel Regular', serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: justify;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.pfpContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pfp {
+  width: 100%;
+  height: auto;
+  border-radius: 45px;
+}
+
+.title {
+  position: absolute;
+  bottom: -1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Cinzel Regular', serif;
+  font-size: 3rem;
+  width: 100%;
+  z-index: 1000;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.cauldronContainer > img {
+  width: 400px;
+  height: 400px;
+}
+
+/* Column Layout */
+.column1 {
+  float: left;
+  width: 20%;
+}
+
+.column2 {
+  width: 50%;
+}
+
+.column3 {
+  float: right;
+  width: 20%;
+}
