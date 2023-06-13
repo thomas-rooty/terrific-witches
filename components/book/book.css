@@ -17,8 +17,8 @@
 }
 
 .page {
-  width: 30vw;
-  height: 44vw;
+  width: 37.5vw;
+  height: 55vw;
   float: left;
   margin-bottom: 0.5em;
   background: none;
@@ -148,8 +148,8 @@
 }
 
 .book .pages {
-  width: 45vw;
-  height: 33vw;
+  width: 56.25vw;
+  height: 41.25vw;
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -163,8 +163,8 @@
   margin: 0;
   position: absolute;
   top: 0;
-  width: 22.5vw;
-  height: 33vw;
+  width: 28.1vw;
+  height: 41.25vw;
   transform-origin: 0 0;
   transition: transform 1.4s;
   backface-visibility: hidden;
