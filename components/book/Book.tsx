@@ -1,12 +1,35 @@
+import { useEffect, useRef } from 'react'
 import './book.css'
 import styles from './book.module.css'
-import { useEffect } from 'react'
 
 interface PageElement extends HTMLElement {
   pageNum: number
 }
 
 const Book = () => {
+  const cooldownRef = useRef(false)
+
+  // Function to handle page click
+  const handlePageClick = (page: PageElement) => {
+    if (!cooldownRef.current) {
+      if (page.pageNum % 2 === 0) {
+        page.classList.remove('flipped')
+        if (page.previousElementSibling) {
+          page.previousElementSibling.classList.remove('flipped')
+        }
+      } else {
+        page.classList.add('flipped')
+        if (page.nextElementSibling) {
+          page.nextElementSibling.classList.add('flipped')
+        }
+      }
+      cooldownRef.current = true
+      setTimeout(() => {
+        cooldownRef.current = false
+      }, 1000) // Set cooldown of 1 second to prevent spamming
+    }
+  }
+
   // Book pagination system
   useEffect(() => {
     const pages = document.getElementsByClassName('page') as HTMLCollectionOf<PageElement>
@@ -16,25 +39,8 @@ const Book = () => {
       if (i % 2 === 0) {
         page.style.zIndex = String(pages.length - i)
       }
-    }
-
-    for (let i = 0; i < pages.length; i++) {
-      const page = pages[i]
       page.pageNum = i + 1
-
-      page.addEventListener('click', () => {
-        if (page.pageNum % 2 === 0) {
-          page.classList.remove('flipped')
-          if (page.previousElementSibling) {
-            page.previousElementSibling.classList.remove('flipped')
-          }
-        } else {
-          page.classList.add('flipped')
-          if (page.nextElementSibling) {
-            page.nextElementSibling.classList.add('flipped')
-          }
-        }
-      })
+      page.addEventListener('click', () => handlePageClick(page))
     }
   }, [])
 
